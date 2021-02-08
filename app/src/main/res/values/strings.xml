@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DashBoardActivity</string>
+    <string name="title_activity_detail">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="permission_required_text">Granting permissions is necessary to be able to download any wallpaper.</string>
+</resources>
