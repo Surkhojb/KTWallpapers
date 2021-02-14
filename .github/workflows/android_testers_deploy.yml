@@ -4,7 +4,7 @@ name: Android Testers CI - Deployment to Firebase
 # Triggered every time master branch has a push.
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
     # Workflow
     jobs:
