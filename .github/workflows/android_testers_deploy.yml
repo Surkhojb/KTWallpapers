@@ -1,37 +1,35 @@
 
 name: Android Testers CI - Deployment to Firebase
-
 # Triggered every time master branch has a push.
 on:
   push:
-    branches: [ mai ]
+    branches: main
 
-    # Workflow
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          # Checkout repo
-          - name: Checkout Repo
-            uses: actions/checkout@v2
-            with:
-              persist-credentials: false
+    workflow_dispatch:
 
-          # Setting-up Java SDK
-          - name: Set-up Java
-            uses: actions/setup-java@v1
-            with:
-              java-version: 1.8
+jobs:
+  build:
 
-          # Building debug apk
-          - name: Build Debug apk
-            run: bash ./gradlew assembleDebug --stacktrace
+    runs-on: ubuntu-latest
 
-          # Upload artifact to Firebase
-          - name: Deploying to tester group in Firebase
-            uses: wzieba/Firebase-Distribution-GithubAction@1.2.1
-            with:
-              appId: ${{secrets.FIREBASE_APP_ID}}
-              token: ${{secrets.FIREBASE_CI_TOKEN}}
-              groups: Testers
-              file: app/build/outputs/apk/debug/app-debug.apk
+    steps:
+      # Checkout Repo
+      - name: Checkout Repo
+      - uses: actions/checkout@v1
+
+      # Setting up Java 1.8
+      - name: Setting Java JDK
+        uses: actions/setup-java@v1
+        with:
+        java-version: 1.8
+
+      # Building debug apk
+      - name: Building Debug Apk
+        run: ./gradlew assembleDebug --stacktrace
+      - name: Deploy artifact to Firebase
+        uses: wzieba/Firebase-Distribution-Github-Action@v1.2.1
+        with:
+          appId: ${{secrets.FIREBASE_APP_ID}}
+          token: ${{secrets.FIREBASE_CI_TOKEN}}
+          groups: Debug
+          file: app/build/outputs/apk/debug/app-debug.apk
