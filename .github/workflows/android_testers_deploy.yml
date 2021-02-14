@@ -26,6 +26,8 @@ jobs:
       # Building debug apk
       - name: Building Debug Apk
         run: ./gradlew assembleDebug --stacktrace
+
+      # Deployment
       - name: Deploy artifact to Firebase
         uses: wzieba/Firebase-Distribution-Github-Action@v1.2.1
         with:
