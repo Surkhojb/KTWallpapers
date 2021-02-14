@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "740675097380",
+    "project_id": "deployment-2d2c7",
+    "storage_bucket": "deployment-2d2c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740675097380:android:d71a41a0a8738881d0d9b1",
+        "android_client_info": {
+          "package_name": "com.surkhojb.dashboardactivity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740675097380-0gn5ebqp70jnp72ej9jr3u2n68hkj9f9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvPn85OIDflQpgBeS8hsZgAZaNTT_dDgk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740675097380-0gn5ebqp70jnp72ej9jr3u2n68hkj9f9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
