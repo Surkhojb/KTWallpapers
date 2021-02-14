@@ -15,13 +15,13 @@ jobs:
     steps:
       # Checkout Repo
       - name: Checkout Repo
-      - uses: actions/checkout@v1
+        uses: actions/checkout@v1
 
       # Setting up Java 1.8
       - name: Setting Java JDK
         uses: actions/setup-java@v1
         with:
-        java-version: 1.8
+          java-version: 1.8
 
       # Building debug apk
       - name: Building Debug Apk
