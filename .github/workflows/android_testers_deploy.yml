@@ -4,7 +4,7 @@ name: Android Testers CI - Deployment to Firebase
 # Triggered every time master branch has a push.
 on:
   push:
-    branches: [ main ]
+    branches: [ mai ]
 
     # Workflow
     jobs:
@@ -13,9 +13,9 @@ on:
         steps:
           # Checkout repo
           - name: Checkout Repo
-          uses: actions/checkout@v2
-          with:
-            persist-credentials: false
+            uses: actions/checkout@v2
+            with:
+              persist-credentials: false
 
           # Setting-up Java SDK
           - name: Set-up Java
